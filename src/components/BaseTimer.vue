@@ -164,12 +164,12 @@ export default {
   }
 
   &__path-elapsed {
-    stroke-width: 5px;
+    stroke-width: 3px;
     stroke: white;
   }
 
   &__path-remaining {
-    stroke-width: 5px;
+    stroke-width: 3px;
     stroke-linecap: round;
     transform: rotate(90deg);
     transform-origin: center;
