@@ -1,31 +1,39 @@
 <template>
-  <div class="base-timer">
-    <svg
-      class="base-timer__svg"
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g class="base-timer__circle">
-        <circle
-          class="base-timer__path-elapsed"
-          cx="50"
-          cy="50"
-          r="45"
-        ></circle>
-        <path
-          :stroke-dasharray="circleDasharray"
-          class="base-timer__path-remaining"
-          :class="remainingPathColor"
-          d="
+  <div>
+    <div class="neumorphic-big-div">
+      <div class="base-timer">
+        <svg
+          class="base-timer__svg"
+          viewBox="0 0 100 100"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g class="base-timer__circle">
+            <circle
+              class="base-timer__path-elapsed"
+              cx="50"
+              cy="50"
+              r="45"
+            ></circle>
+            <path
+              :stroke-dasharray="circleDasharray"
+              class="base-timer__path-remaining"
+              :class="remainingPathColor"
+              d="
             M 50, 50
             m -45, 0
             a 45,45 0 1,0 90,0
             a 45,45 0 1,0 -90,0
           "
-        ></path>
-      </g>
-    </svg>
-    <span class="base-timer__label">{{ formattedTimeLeft }}</span>
+            ></path>
+          </g>
+        </svg>
+        <span class="base-timer__label">
+          <div class="neumorphic-timer-div">
+            {{ formattedTimeLeft }}
+          </div>
+        </span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -122,7 +130,26 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.neumorphic-timer-div {
+  padding: 20px;
+  background: #058f8c;
+  border-radius: 20%;
+  box-shadow: 9.91px 9.91px 15px #05827f, -9.91px -9.91px 15px #059c99;
+}
+.neumorphic-big-div {
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  padding: 20px;
+  background: #058f8c;
+  box-shadow: 9.91px 9.91px 15px #05827f, -9.91px -9.91px 15px #059c99;
+  border-radius: 100%;
+}
+
 .base-timer {
+  background: #058f8c;
+  box-shadow: 9.91px 9.91px 15px #05827f, -9.91px -9.91px 15px #059c99;
+  border-radius: 100%;
   position: relative;
   width: 300px;
   height: 300px;
@@ -137,12 +164,12 @@ export default {
   }
 
   &__path-elapsed {
-    stroke-width: 7px;
-    stroke: grey;
+    stroke-width: 5px;
+    stroke: white;
   }
 
   &__path-remaining {
-    stroke-width: 7px;
+    stroke-width: 5px;
     stroke-linecap: round;
     transform: rotate(90deg);
     transform-origin: center;
@@ -172,6 +199,7 @@ export default {
     align-items: center;
     justify-content: center;
     font-size: 48px;
+    color: white;
   }
 }
 </style>

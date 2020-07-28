@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-    <BaseTimer />
+    <div class="align-middle">
+      <BaseTimer />
+    </div>
   </div>
 </template>
 
@@ -16,12 +18,18 @@ export default {
 </script>
 
 <style>
+body {
+  background: #058f8c;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.align-middle {
+  margin: auto;
+  width: 50%;
 }
 </style>
