@@ -54,7 +54,6 @@ export default {
     return {
       timePassed: 0,
       timerInterval: null,
-      felipe: COLOR_CODES,
     };
   },
 
