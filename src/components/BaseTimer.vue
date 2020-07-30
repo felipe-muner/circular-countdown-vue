@@ -131,7 +131,6 @@ export default {
 
 <style scoped lang="scss">
 .neumorphic-timer-div {
-  padding: 20px;
   background: #058f8c;
   border-radius: 20%;
   box-shadow: 9.91px 9.91px 15px #05827f, -9.91px -9.91px 15px #059c99;
@@ -140,7 +139,6 @@ export default {
   margin: auto;
   height: 300px;
   width: 300px;
-  padding: 20px;
   background: #058f8c;
   box-shadow: 9.91px 9.91px 15px #05827f, -9.91px -9.91px 15px #059c99;
   border-radius: 100%;
